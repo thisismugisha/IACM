@@ -1,0 +1,193 @@
+/* Defines attributes that should be present in all elements */
+* {
+    font-family: 'Proza Libre';
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Restricts all elements to be within the viewing width of the screen to avoid a horizontal scrollbar */
+body {
+    max-width: 100vw;
+}
+
+/* Horizontally aligns all elements while vertically positioning them in the header tag */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    height: fit-content;
+}
+
+/* Makes sure there's no unnecessary space inside the link tag */
+header a {
+    height: fit-content;
+    color: #005da8;
+}
+
+/* Defines the width to be dependent on the view width of the window */
+header a img {
+    width: 9vw;
+}
+
+/* Makes the unordered list horizontally list its content and make them all upercase */
+header nav ul {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 1vw;
+    list-style: none;
+    margin: 8px 16px;
+}
+
+/* Horizontally aligns the text while vertically positioning them in the li tag */
+header nav ul li {
+    margin: 0px 8px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav ul li:hover {
+    background-color: #105282;
+    color: white;
+}
+
+header nav ul li:hover > a {
+    color: white;
+}
+
+/* Positions the language options to the left */
+.lang-options {
+    margin-left: auto;
+}
+
+/* Puts a background image while giving the first title div a relative position */
+#title {
+    position: relative;
+    height: 69vh;
+    background: url('../images/planes_in_airport.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Makes the second title div fill the whole view width */
+#title div {
+    text-align: center;
+    width: 100%;
+    background-color: #105282;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Stylelizes the title text */
+#title div p {
+    padding: .69vw 0;
+    font-size: 3.8vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* Makes every div except the title div have a padding */
+.content > div:not(#title) {
+    padding: 40px;
+}
+
+/* Makes the children of the divs with padding have a margin-bottom */
+.content div:not(#title) > div {
+    margin-bottom: 40px;
+}
+
+/* Stylelizes the paragraph title text */
+.content div div h2 {
+    border-left: 4px solid #EDB947;
+    padding: 12px;
+    margin-bottom: 12px;
+    color: #005da8;
+}
+
+/* Indents the unordered list to the right */
+.content div div ul {
+    margin-left: 32px;
+}
+
+/* Makes the height of the footer depend on the content and gives it a bg color */
+footer {
+    height: fit-content;
+    background-color: #4c4c4c;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+/* Makes the second div (the footer content) fill the whole view width while horizontally aligning its content */
+footer .footer-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+}
+
+#row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Makes the div not take unnecessary space */
+#row div {
+    width: fit-content;
+    margin: 32px;
+}
+
+/* Stylelizes the title text */
+#row div h4 {
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 32px;
+    font-weight: 500;
+    position: relative;
+}
+
+/* Draws a line below the title text */
+#row div h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #EDB947;
+    height: 2px;
+    box-sizing: border-box;
+    width: 32%;
+}
+
+#row div ul {
+    list-style: none;
+}
+
+/* Gives bottom space to all li tag */
+#row div ul li:not(:last-child){
+    margin-bottom: 8px;
+}
+
+
+/* Stylelizes the links and address */
+#row div ul li a,
+#row div ul li address {
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+#row div ul li a:hover {
+    color: white;
+}
